@@ -1,15 +1,32 @@
 // 1) Importar el objeto 'database' del archivo "./basededatos"
 import { database } from './basededatos';
+import {helpersss} from './helpers'
+// // 2) Implementar una función que obtenga una universidad por Id
+// // 🤓 Tip: pueden ir probando las funciones usando console.log() asegurándose que los resultados sean los esperados
 
-// 2) Implementar una función que obtenga una universidad por Id
-// 🤓 Tip: pueden ir probando las funciones usando console.log() asegurándose que los resultados sean los esperados
+// const findUniversidadByID = (id)=> {database.universidades.find(item=>item.id===id )}
+// // 3) Implementar una función que obtenga un profesor por Id
+// const findProfesorByID = (id)=> {database.profesores.find(item=>item.id===id );};
+// // 4) Implementar una función que obtenga una materia por Id
+// const findMateriaByID = (id)=> {database.materias.find(item=>item.id===id )};
+// // 🤓 Tip: Comparar con la función del ejercicio (3) y ver si se les ocurre una función genérica que sirva para cualquier tabla
+// const findById = (tabla) => 
+// {
+//     (id)=> {return database[tabla].find((item)=> item.id===id)};
+// }; 
+// // findById("materias")(2)
+// // 5) Crear un objeto 'helpers' que contenga las funciones como métodos
+// const helpers=
+// {
 
-// 3) Implementar una función que obtenga un profesor por Id
+//     findUniversidadByID : (id)=> {database.universidades.find(item=>item.id===id );},
+//     findProfesorByID : (id)=> {database.profesores.find(item=>item.id===id );},
+//     findMateriaByID : (id)=> {database.materias.find(item=>item.id===id );},
+//     findById :(tabla) =>     {   (id)=> {return database[tabla].find((item)=> item.id===id);}; }
+// };
 
-// 4) Implementar una función que obtenga una materia por Id
-// 🤓 Tip: Comparar con la función del ejercicio (3) y ver si se les ocurre una función genérica que sirva para cualquier tabla
+console.log(findUniversidadByID(1));
 
-// 5) Crear un objeto 'helpers' que contenga las funciones como métodos
 
 // 6) Mover helpers y el todo el co´digo a un módulo, creando un nuevo archivo helpers.js
 
