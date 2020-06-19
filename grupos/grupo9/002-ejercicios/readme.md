@@ -1,4 +1,4 @@
-# Ejercicios 002
+  # Ejercicios 002
 
 Completar las funciones del módulo 'index.js' en el orden en que aparecen.
 

@@ -1,0 +1,303 @@
+Muestro la salida por consola de los ejercicios:
+-----------------------1-------------------------------
+Ejecutando ejercicios materiasAprobadasByNombreAlumno.
+Materias aprobadas por Suzana: Set {
+  {
+    id: 1,
+    nombre: 'Análisis matemático',
+    profesores: [ 1, 2 ],
+    universidad: 1
+  },
+  {
+    id: 3,
+    nombre: 'Diseño de indumentaria',
+    profesores: [ 4 ],
+    universidad: 2
+  },
+  {
+    id: 4,
+    nombre: 'Programación orientada a objetos',
+    profesores: [ 1, 3 ],
+    universidad: 1
+  }
+}
+Materias aprobadas por Alina: Set {
+  {
+    id: 2,
+    nombre: 'Corte y confección de sabanas',
+    profesores: [ 3 ],
+    universidad: 2
+  },
+  {
+    id: 3,
+    nombre: 'Diseño de indumentaria',
+    profesores: [ 4 ],
+    universidad: 2
+  }
+}
+-------------------------2-----------------------------
+Ejecutando ejercicios expandirInfoUniversidadByNombre.
+Info comahue: [
+  {
+    id: 1,
+    nombre: 'Universidad del Comahue',
+    direccion: { calle: 'Av. Siempre viva', numero: 2043, provincia: 'Neuquen' }
+  },
+  [
+    {
+      id: 1,
+      nombre: 'Análisis matemático',
+      profesores: [Array],
+      universidad: 1
+    },
+    {
+      id: 4,
+      nombre: 'Programación orientada a objetos',
+      profesores: [Array],
+      universidad: 1
+    },
+    {
+      id: 5,
+      nombre: 'Ciencias Sociales',
+      profesores: [Array],
+      universidad: 1
+    }
+  ]
+]
+Info rio negro: [
+  {
+    id: 2,
+    nombre: 'Universidad de Rio Negro',
+    direccion: { calle: 'Av. Roca', numero: 3023, provincia: 'Rio Negro' }
+  },
+  [
+    {
+      id: 2,
+      nombre: 'Corte y confección de sabanas',
+      profesores: [Array],
+      universidad: 2
+    },
+    {
+      id: 3,
+      nombre: 'Diseño de indumentaria',
+      profesores: [Array],
+      universidad: 2
+    }
+  ]
+]
+-----------------------3-------------------------------
+****Promedio de edad de  alumno:***
+entro promedioDeEdad
+entro promedioEdadAlumnos [
+  { id: 1, nombre: 'Rigoberto Manchu', edad: 22, provincia: 1 },
+  { id: 2, nombre: 'Alina Robles', edad: 21, provincia: 2 },
+  { id: 3, nombre: 'Suzana Mendez', edad: 33, provincia: 2 },
+  { id: 4, nombre: 'Adrian Soto', edad: 26, provincia: 1 },
+  { id: 5, nombre: 'Martin Sarnaga', edad: 23, provincia: 2 },
+  { id: 6, nombre: 'Pablo Tomafi', edad: 30, provincia: 2 }
+]
+result 25.833333333333332
+Promedio de edad por alumno: 25.833333333333332
+-----------------------4-------------------------------
+prome: 6.25
+prome: 3.6666666666666665
+prome: 5.666666666666667
+prome: 9
+prome: 4
+Nota promedio  por alumno (4): [
+  { id: 1, nombre: 'Rigoberto Manchu', edad: 22, provincia: 1 },
+  { id: 3, nombre: 'Suzana Mendez', edad: 33, provincia: 2 },
+  { id: 4, nombre: 'Adrian Soto', edad: 26, provincia: 1 }
+]
+prome: 6.25
+prome: 3.6666666666666665
+prome: 5.666666666666667
+prome: 9
+prome: 4
+Nota promedio  por alumno (5): [
+  { id: 1, nombre: 'Rigoberto Manchu', edad: 22, provincia: 1 },
+  { id: 3, nombre: 'Suzana Mendez', edad: 33, provincia: 2 },
+  { id: 4, nombre: 'Adrian Soto', edad: 26, provincia: 1 }
+]
+prome: 6.25
+prome: 3.6666666666666665
+prome: 5.666666666666667
+prome: 9
+prome: 4
+Nota promedio  por alumno (6): [
+  { id: 1, nombre: 'Rigoberto Manchu', edad: 22, provincia: 1 },
+  { id: 4, nombre: 'Adrian Soto', edad: 26, provincia: 1 }
+]
+-----------------------5-------------------------------
+Materias sin incripciones: [
+  {
+    id: 5,
+    nombre: 'Ciencias Sociales',
+    profesores: [ 4 ],
+    universidad: 1
+  }
+]
+-----------------------6-------------------------------
+entro promedioEdadAlumnos [
+  { id: 1, nombre: 'Rigoberto Manchu', edad: 22, provincia: 1 },
+  { id: 2, nombre: 'Alina Robles', edad: 21, provincia: 2 },
+  { id: 3, nombre: 'Suzana Mendez', edad: 33, provincia: 2 },
+  { id: 4, nombre: 'Adrian Soto', edad: 26, provincia: 1 },
+  { id: 5, nombre: 'Martin Sarnaga', edad: 23, provincia: 2 },
+  { id: 6, nombre: 'Pablo Tomafi', edad: 30, provincia: 2 }
+]
+result 25.833333333333332
+Edad promedio universidad (1): 25.833333333333332
+entro promedioEdadAlumnos [
+  { id: 1, nombre: 'Rigoberto Manchu', edad: 22, provincia: 1 },
+  { id: 2, nombre: 'Alina Robles', edad: 21, provincia: 2 },
+  { id: 3, nombre: 'Suzana Mendez', edad: 33, provincia: 2 },
+  { id: 4, nombre: 'Adrian Soto', edad: 26, provincia: 1 },
+  { id: 5, nombre: 'Martin Sarnaga', edad: 23, provincia: 2 },
+  { id: 6, nombre: 'Pablo Tomafi', edad: 30, provincia: 2 }
+]
+result 25.833333333333332
+Edad promedio universidad (2): 25.833333333333332
+Edad promedio universidad (3): 0
+PS E:\Cursos\Diplomatura-JavaScript\clase de NodeJs\repositorio\diplomatura.js\001-ejercicios> npm run start
+
+> 001-ejecrcicios@1.0.0 start E:\Cursos\Diplomatura-JavaScript\clase de NodeJs\repositorio\diplomatura.js\001-ejercicios
+> npm run build && node dist/index.js
+
+
+> 001-ejecrcicios@1.0.0 build E:\Cursos\Diplomatura-JavaScript\clase de NodeJs\repositorio\diplomatura.js\001-ejercicios
+> babel ./src/**/*.js -d dist
+
+Successfully compiled 3 files with Babel (3532ms).
+-----------------------1-------------------------------
+Ejecutando ejercicios materiasAprobadasByNombreAlumno.
+Materias aprobadas por Suzana: Set {
+  {
+    id: 1,
+    nombre: 'Análisis matemático',
+    profesores: [ 1, 2 ],
+    universidad: 1
+  },
+  {
+    id: 3,
+    nombre: 'Diseño de indumentaria',
+    profesores: [ 4 ],
+    universidad: 2
+  },
+  {
+    id: 4,
+    nombre: 'Programación orientada a objetos',
+    profesores: [ 1, 3 ],
+    universidad: 1
+  }
+}
+Materias aprobadas por Alina: Set {
+  {
+    id: 2,
+    nombre: 'Corte y confección de sabanas',
+    profesores: [ 3 ],
+    universidad: 2
+  },
+  {
+    id: 3,
+    nombre: 'Diseño de indumentaria',
+    profesores: [ 4 ],
+    universidad: 2
+  }
+}
+-------------------------2-----------------------------
+Ejecutando ejercicios expandirInfoUniversidadByNombre.
+Info comahue: [
+  {
+    id: 1,
+    nombre: 'Universidad del Comahue',
+    direccion: { calle: 'Av. Siempre viva', numero: 2043, provincia: 'Neuquen' }
+  },
+  [
+    {
+      id: 1,
+      nombre: 'Análisis matemático',
+      profesores: [Array],
+      universidad: 1
+    },
+    {
+      id: 4,
+      nombre: 'Programación orientada a objetos',
+      profesores: [Array],
+      universidad: 1
+    },
+    {
+      id: 5,
+      nombre: 'Ciencias Sociales',
+      profesores: [Array],
+      universidad: 1
+    }
+  ]
+]
+Info rio negro: [
+  {
+    id: 2,
+    nombre: 'Universidad de Rio Negro',
+    direccion: { calle: 'Av. Roca', numero: 3023, provincia: 'Rio Negro' }
+  },
+  [
+    {
+      id: 2,
+      nombre: 'Corte y confección de sabanas',
+      profesores: [Array],
+      universidad: 2
+    },
+    {
+      id: 3,
+      nombre: 'Diseño de indumentaria',
+      profesores: [Array],
+      universidad: 2
+    }
+  ]
+]
+-----------------------3-------------------------------
+****Promedio de edad de  alumno:***
+Promedio de edad por alumno: 25.833333333333332
+-----------------------4-------------------------------
+prome: 6.25
+prome: 3.6666666666666665
+prome: 5.666666666666667
+prome: 9
+prome: 4
+Nota promedio  por alumno (4): [
+  { id: 1, nombre: 'Rigoberto Manchu', edad: 22, provincia: 1 },
+  { id: 3, nombre: 'Suzana Mendez', edad: 33, provincia: 2 },
+  { id: 4, nombre: 'Adrian Soto', edad: 26, provincia: 1 }
+]
+prome: 6.25
+prome: 3.6666666666666665
+prome: 5.666666666666667
+prome: 9
+prome: 4
+Nota promedio  por alumno (5): [
+  { id: 1, nombre: 'Rigoberto Manchu', edad: 22, provincia: 1 },
+  { id: 3, nombre: 'Suzana Mendez', edad: 33, provincia: 2 },
+  { id: 4, nombre: 'Adrian Soto', edad: 26, provincia: 1 }
+]
+prome: 6.25
+prome: 3.6666666666666665
+prome: 5.666666666666667
+prome: 9
+prome: 4
+Nota promedio  por alumno (6): [
+  { id: 1, nombre: 'Rigoberto Manchu', edad: 22, provincia: 1 },
+  { id: 4, nombre: 'Adrian Soto', edad: 26, provincia: 1 }
+]
+-----------------------5-------------------------------
+Materias sin incripciones: [
+  {
+    id: 5,
+    nombre: 'Ciencias Sociales',
+    profesores: [ 4 ],
+    universidad: 1
+  }
+]
+-----------------------6-------------------------------
+Edad promedio universidad (1): 25
+Edad promedio universidad (2): 25
+Edad promedio universidad (3): 0

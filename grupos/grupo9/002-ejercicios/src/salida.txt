@@ -1,0 +1,97 @@
+{
+  id: 1,
+  nombre: 'Universidad del Comahue',
+  direccion: { calle: 'Av. Siempre viva', numero: 2043, provincia: 'Neuquen' }
+}
+busco profesor por id(1)  { id: 1, nombre: 'Jorge Esteban Quito' }
+busco materia por id (1) {
+  id: 1,
+  nombre: 'Análisis matemático',
+  profesores: [ 1, 2 ],
+  universidad: 1
+}
+busco tabla por id (universidad===1) {
+  id: 1,
+  nombre: 'Universidad del Comahue',
+  direccion: { calle: 'Av. Siempre viva', numero: 2043, provincia: 'Neuquen' }
+}
+ultima universidad  2
+busco provincia por propiedad- nombre-Neuquen { id: 1, nombre: 'Neuquen' }
+--------------------9------------------------
+insertar provincia : 3
+
+{ id: 3, nombre: 'Mendoza' }
+
+esta provincia ya existe.
+
+insertar provincia Neuquen -1
+
+--------------------10------------------------
+extender materia por nombres:
+
+{
+  id: 1,
+  nombre: 'Análisis matemático',
+  profesores: [ 'Jorge Esteban Quito', 'Marta Raca' ],
+  universidad: 'Universidad del Comahue'
+}
+--------------------11------------------------
+NOTAS DE ALUMNOS
+-----------------
+
+RIGOBERTO MANCHU
+Análisis matemático: 5
+Diseño de indumentaria: 7.5
+
+
+ALINA ROBLES
+Corte y confección de sabanas: 4
+Diseño de indumentaria: 5
+Programación orientada a objetos: 2
+
+
+SUZANA MENDEZ
+Análisis matemático: 6
+Diseño de indumentaria: 5
+Programación orientada a objetos: 6
+
+
+ADRIAN SOTO
+Análisis matemático: 9
+Corte y confección de sabanas: 9.5
+Programación orientada a objetos: 8.5
+
+
+MARTIN SARNAGA
+Diseño de indumentaria: 7
+Programación orientada a objetos: 1
+
+
+PABLO TOMAFI
+El alumno no se ha inscripto a ninguna materia
+--------------------12------------------------
+inserto calificacion: (luis) (analisis analizados)(7)
+mostrar Alumno creado: { id: 7, nombre: 'luis' }
+mostrar materia creada { id: 6, nombre: 'analisis analizados' }
+inserto calificacion: (luis) (analisis analizados)(8)
+mostrar Alumno creado: { id: 8, nombre: 'luis' }
+inserto calificacion: (luis) (analisis analizados)(9)
+mostrar Alumno creado: { id: 9, nombre: 'luis' }
+mostrar calificaciones : [
+  { alumno: 1, materia: 1, nota: 5 },
+  { alumno: 1, materia: 3, nota: 7.5 },
+  { alumno: 2, materia: 2, nota: 4 },
+  { alumno: 2, materia: 3, nota: 5 },
+  { alumno: 2, materia: 4, nota: 2 },
+  { alumno: 3, materia: 1, nota: 6 },
+  { alumno: 3, materia: 3, nota: 5 },
+  { alumno: 3, materia: 4, nota: 6 },
+  { alumno: 4, materia: 1, nota: 9 },
+  { alumno: 4, materia: 2, nota: 9.5 },
+  { alumno: 4, materia: 4, nota: 8.5 },
+  { alumno: 5, materia: 3, nota: 7 },
+  { alumno: 5, materia: 4, nota: 1 },
+  { alumno: 7, materia: 6, nota: 7 },
+  { alumno: 8, materia: 6, nota: 8 },
+  { alumno: 9, materia: 6, nota: 9 }
+]
