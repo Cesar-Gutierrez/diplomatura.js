@@ -4,12 +4,16 @@ export async function run() {
     
 try {
     console.log(1);
-    await delay(3000).then((prometido)=> console.log(prometido));
-    console.log(2);
-    await delay(2000).then((prometido)=> console.log(prometido));
-    console.log(3)
-    await delay(1000).then((prometido)=> console.log(prometido));
+    let mostrar1 = await delay(3000)
+    console.log(mostrar1);
 
+    console.log(2);
+   let mostrar2 =  await delay(2000)
+   console.log(mostrar2);
+
+    console.log(3)
+    let mostrar3 = await delay(1000)
+    console.log(mostrar3);
 }
     catch(err)
     {console.log('Ha ocurrido un error:',err);}
