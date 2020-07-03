@@ -1,0 +1,7 @@
+Buenas team pongo esta carpeta para organizar el ej 003.
+La idea es que cada uno suba los ejercicios y su version del index.js  segun lo acordamos en la juntada,osea:
+1 ,2 ,3 ---> Aldo
+4,5 ----> Cristian
+6 ------>Jose
+
+En el index que suban pongan solo lo que va a utilizar su ejercicio para evitar problemas con el resto.
