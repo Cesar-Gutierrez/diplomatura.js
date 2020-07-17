@@ -31,6 +31,7 @@ export async function find(db, nameCollection, params) {
         console.log("No fue posible realizar la consulta! Error:  ", error);
     }
 }
+
 export async function findById(db, nameCollection, id) {
     if (!db || !nameCollection || !id) {
         console.log("BD, colección y/o id son incorrectos");
@@ -42,5 +43,19 @@ export async function findById(db, nameCollection, id) {
         return await collection.findOne({ _id: idObj });
     } catch (error) {
         console.log("No fue posible realizar la consulta! Error:  ", error);
+    }
+}
+
+export async function insertarDoc(db, nameCollection, doc) {
+    if (!db || !nameCollection || !doc) {
+        console.log("BD o elemento incorrecto");
+        return;
+    }
+    try {
+        const collection = db.collection(nameCollection);
+        const result = await collection.insertOne(doc);
+        return result;
+    } catch (error) {
+        console.log("No fue posible realizar la insercion! Error:  ", error);
     }
 }

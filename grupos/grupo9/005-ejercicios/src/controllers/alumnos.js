@@ -20,9 +20,6 @@ const getAlumnos = async (collection, params) => {
   return res;
 }
 
-
-
-
 router.get('/:id', async function (req, res) {
   const id = req.params.id;
   let resp = {};
@@ -46,13 +43,32 @@ const getAlumnoById = async (collection, id) => {
   return res;
 }
 
-
-router.post('/', function (req, res) {
+router.post('/', async function (req, res) {
   // TIP: En req.body viene los datos
-
-  // Completar
-  res.json({});
+  console.log("reqbody :", req.body);
+  let resp;
+  let message;
+  if (req.body && req.body !== {}) {
+    resp = await insertarAlumno('alumno', req.body);
+    message = 'alumno insertado con éxito';
+  } else {
+    message = 'alumno no insertado: no se recibieron datos';
+  }
+  //res.json('producto insertado');
+  res.status(200).send({ message })
 });
+
+const insertarAlumno = async (collection, params) => {
+  // abrimos la conexión
+  let client = await connectDB.connect();
+  const db = client.db(dbName);
+  // hacemos la búsqueda en la colección alumno
+  const res = await connectDB.insertarDoc(db, collection, params);
+  client.close();
+  return res;
+}
+
+
 
 // Completar el resto de los métodos
 // router....
