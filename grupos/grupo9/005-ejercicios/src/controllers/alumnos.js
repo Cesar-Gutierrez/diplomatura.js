@@ -2,11 +2,13 @@ import express from 'express';
 import * as connectDB from '../utils/crud-mongo';
 const router = express.Router();
 
-const dbName = 'diplomaturajs';
+const dbName = 'diplomatura';
+const collectionName = 'alumnos';
+const singleName = 'Alumno';
 
 router.get('/', async function (req, res) {
   const params = req.query;
-  res.json(await getAlumnos('alumno', params));
+  res.json(await getAlumnos(collectionName, params));
 });
 
 
@@ -24,7 +26,7 @@ router.get('/:id', async function (req, res) {
   const id = req.params.id;
   let resp = {};
   if (id) {
-    resp = await getAlumnoById('alumno', id);
+    resp = await getAlumnoById(collectionName, id);
   }
   res.json(resp);
 });
@@ -45,16 +47,19 @@ const getAlumnoById = async (collection, id) => {
 
 router.post('/', async function (req, res) {
   // TIP: En req.body viene los datos
-  console.log("reqbody :", req.body);
+/*   console.log("Esto tiene el body :", req.body);
+  console.log("Esto tiene el query :", req.query); */
   let resp;
   let message;
-  if (req.body && req.body !== {}) {
-    resp = await insertarAlumno('alumno', req.body);
-    message = 'alumno insertado con éxito';
+  //let message;return;
+  if (req.body && Object.keys(req.body).length !== 0) {
+    resp = await insertarAlumno(collectionName, req.body);
+    message = `${singleName} insertado con éxito`;
   } else {
-    message = 'alumno no insertado: no se recibieron datos';
+    message = `${singleName} no insertado: no se recibieron datos`;
   }
   //res.json('producto insertado');
+  //console.log(message)
   res.status(200).send({ message })
 });
 
