@@ -1,18 +1,4 @@
 
-let tabla=`
-<table>
-  <tr>
-    <th>name</th>
-    <th>height</th>
-    <th>place</th>
-  </tr>
-  <tr>
-    <td>Kilimanjaro</td>
-    <td>5895</td>
-    <td>Tanzania</td>
-  </tr>
-  </table>
-`
 const mountains = [
     { name: 'Kilimanjaro', height: 5895, place: 'Tanzania' },
     { name: 'Everest', height: 8848, place: 'Nepal' },
@@ -26,9 +12,10 @@ const mountains = [
 const generarTabla=()=>{
     let encabezado= `<table>
     <tr>
-      <th>name</th>
-      <th>height</th>
-      <th>place</th>
+      <th id="name">name</th>
+      <th id="height">height</th>
+      <th id="place">place</th>
+      
     </tr>
     `
     mountains.forEach(mount => {
@@ -48,4 +35,22 @@ const generarTabla=()=>{
 
 
 
-document.getElementById('tabla').innerHTML = generarTabla();
+
+const generarTablaHTML=()=>{  document.getElementById('tabla').innerHTML = generarTabla();}
+
+
+const traducirEncabezado=()=>{
+    
+    document.getElementById('name').innerHTML = "nombre";
+    document.getElementById('height').innerHTML = "altura";
+    document.getElementById('place').innerHTML = "lugar";
+};
+
+document.getElementById("boton_ing").onclick=generarTablaHTML;
+
+
+document.getElementById("boton_esp").onclick=function(){generarTablaHTML();
+    traducirEncabezado()}
+
+
+
