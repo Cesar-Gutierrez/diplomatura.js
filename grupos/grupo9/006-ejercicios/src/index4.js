@@ -1,60 +1,58 @@
-//obtenemos un número aleatorio entre 10 y 30
-let contGlobos = Math.floor(Math.random() * (30 - 10) + 10);
-console.log(contGlobos);
+const inicio = () => {
+  document.getElementById('app').innerHTML = generarListaGlobos();
+  for (let i = 0; i < contGlobos; i++) {
+    document.getElementById('globo' + i).onclick = borrarGlobo;
+  }
+};
 const generarListaGlobos = () => {
-  let listaGlobos='';
+  let listaGlobos = '';
   let colores = ['Azul', 'Rojo', 'Amarillo'];
   for (let i = 0; i < contGlobos; i++) {
     let pos = i % colores.length; // obtenemos el resto de dividir por 3
-    if (i%10===0)
-      listaGlobos+='<br>';
-    
-    listaGlobos += `<div class="globo${colores[pos]}" id="globo${i}"></div>`;
+    if (i % 10 === 0) listaGlobos += '<br>';
+
+    listaGlobos += `<div class=" col-sm-1 globo${colores[pos]}
+    " id="globo${i}"><h4 class="font-weight-bold text-muted">${
+      i + 1
+    }</h4></div>`;
   }
   return listaGlobos;
 };
 
-document.getElementById('app').innerHTML = generarListaGlobos();
-let pos;
-for (let i = 0; i < contGlobos; i++) {
-pos=i*100;
-  document.getElementById('globo' + i).onclick = borrarGlobo;
- // document.getElementById('globo' + i).setAttribute("style", "margin-left:"+pos+"px;margin-top:"+10+"px;");
-
-  //document.getElementById('globo' + i).style.margin="("+pos+",15)";
-}
-
-
+/**
+ * Evento click que borra el globo clickeado
+ * @param {Object} event
+ */
 function borrarGlobo(event) {
-  console.log(event,event.target.attributes.id.nodeValue);
-  if (eliminarElemento(event.target.attributes.id.nodeValue)){
+  let id = event.target.attributes.id?.nodeValue;
+  if (eliminarElemento(id)) {
     contGlobos--;
-    if (contGlobos===0)
-    alert("Ganaste");
+    if (contGlobos === 0) {
+      alert('Ganaste');
+    }
   }
 }
 
- 
-function eliminarElemento(id){
-	let element = document.getElementById(id);	
-	if (!element){
-		return false;
-	} else {
-		padre = element.parentNode;
-    padre.removeChild(element);
-    return true;
-	}
-} 
-
-// top es moverme dede arriba hacia abajo
-// left moverme desde izquierda a derecha
-
-/* console.log(document.getElementById("globo1").offsetTop);
-console.log(document.getElementById("globo2").offsetTop);
-console.log(document.getElementById("globo3").offsetTop);
-
-
-console.log(document.getElementById("globo1").offsetLeft);
-console.log(document.getElementById("globo2").offsetLeft);
-document.getElementById("globo3").setAttribute("style", "margin-left: 100px;");
+/**
+ * Método que elimina un elemento del HTML con el id ingresado
+ * @param {string} id
  */
+function eliminarElemento(id) {
+  let element = document.getElementById(id);
+  if (element) {
+    padre = element.parentNode; //obtiene el padre
+    padre.removeChild(element); //el padre borra a su elemento hijo
+    return true;
+  }
+  return false;
+}
+
+// -------------------------------------------------------------------
+
+//obtenemos un número aleatorio entre 10 y 30
+const limitSup = 30;
+const limitInf = 10;
+
+let contGlobos = Math.floor(Math.random() * (limitSup - limitInf) + limitInf);
+console.log('Total de Globos:', contGlobos);
+inicio();

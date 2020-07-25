@@ -9,27 +9,25 @@ const mountains = [
 ];
 
 const generarTabla = () => {
-  let encabezado = `<table>
+  let tablaHtml = `<table class = "table table-dark table-hover">
+   <thead  class = "thead-light">
     <tr>
       <th id="name">name</th>
       <th id="height">height</th>
-      <th id="place">place</th>
-      
+      <th id="place">place</th> 
     </tr>
-    `;
+   </thead>`;
   mountains.forEach((mount) => {
-    encabezado =
-      encabezado +
-      `
-   <tr>
+    tablaHtml =
+      tablaHtml +
+      `<tr>
         <td>${mount.name}</td>
         <td>${mount.height}</td>
         <td>${mount.place}</td>
-    </tr>
-      `;
+    </tr>`;
   });
-  encabezado = encabezado + `</table>`;
-  return encabezado;
+  tablaHtml = tablaHtml + `</table>`;
+  return tablaHtml;
 };
 
 const generarTablaHTML = () => {

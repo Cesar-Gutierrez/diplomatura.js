@@ -9,13 +9,14 @@ const mountains = [
 ];
 
 const generarTabla = () => {
-  let lista = `<table>
+  let lista = `<table class = "table table-dark table-hover">
+  <thead  class = "thead-light">
     <tr>
       <th>name</th>
       <th>height</th>
       <th>place</th>
     </tr>
-    `;
+    </thead>`;
   mountains.forEach((mount) => {
     lista =
       lista +

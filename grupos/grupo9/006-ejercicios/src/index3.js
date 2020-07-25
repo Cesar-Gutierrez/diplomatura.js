@@ -1,11 +1,9 @@
 const generarLista = () => {
-  let lista = `<ul>
-    `;
+  let lista = `<ul list-group list-group-flush>`;
   TODO.forEach((elemento) => {
     lista =
       lista +
-      `
-        <li>${elemento}<button id ="botonDelete${elemento}" style="background:red;">X</button> </li>
+      `<li class="list-group-item list-group-item-dark d-flex justify-content-between">${elemento}<button id ="botonDelete${elemento}" class="btn btn-danger btn-sm">X</button> </li>
       `;
   });
   lista = lista + `</ul>`;
@@ -14,7 +12,6 @@ const generarLista = () => {
 
 const cargarItem = (valorItem) => {
   let result = false;
-
   if (valorItem && valorItem.trim() != '') {
     TODO.push(valorItem);
     result = true;

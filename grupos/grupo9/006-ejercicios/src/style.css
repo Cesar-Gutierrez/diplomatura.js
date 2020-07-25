@@ -4,30 +4,36 @@ body {
 h1 {
   text-align: center;
 }
+
+/* TABLAS */
+#tabla {
+  width: 60%;
+  height: 60%;
+  margin: 2% 15%;
+}
+
+/* GLOBOS */
+
 .globoAmarillo {
-  border-radius: 300px;
+  border-radius: 100px;
   background: #f7ce17;
-  padding: 4%;
-  width: 0%;
-  height: 0%;
-  
-  left: 10%;
+  width: 50px;
+  height: 110px;
+  margin: 2%;
 }
 
 .globoAzul {
   border-radius: 300px;
   background: rgb(1, 81, 87);
-  padding: 20px;
   width: 50px;
-  height: 50px;
-  /*  align-self: center;*/
+  height: 110px;
+  margin: 2%;
 }
 
 .globoRojo {
   border-radius: 300px;
   background: rgb(141, 4, 4);
-  padding: 20px;
   width: 50px;
-  height: 50px;
-  /*vertical-align: center;*/
+  height: 110px;
+  margin: 2%;
 }
