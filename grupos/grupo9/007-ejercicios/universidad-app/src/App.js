@@ -2,12 +2,13 @@ import React from "react";
 import "./App.css";
 import datos from "./datos";
 import TodoList from "./components/TodoList";
+import AddAlumno from "./components/AddAlumno";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      vistaActual: "alumnos este es el h2?",
+      vistaActual: "alumnos ",
       idDetalleSeleccionado: 1,
       alumnos: datos.alumnos,
       profesores: datos.profesores,
@@ -32,7 +33,7 @@ class App extends React.Component {
   }
   render() {
     // const vistaActual = <div>setVistaActual('alumnos',1)</div>;
-    const vistaActual = <div>TODO y algo mas</div>;
+    const vistaActual = <div>TODO </div>;
     return (
       <div className="App">
         <header className="alert alert-info">Diplomatura JS</header>
@@ -44,12 +45,11 @@ class App extends React.Component {
         </div>
         <h2>{this.state.vistaActual}</h2>
         <div>
-          
-
           <div className="mainView">{vistaActual}</div>
           <div>{/* //deberia poner el addForm */}</div>
           <div>
-            {<TodoList />}
+           
+            <div>{<TodoList />}</div>
           </div>
         </div>
       </div>

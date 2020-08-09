@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import datos from "../datos";
 import TodoItem from './TodoItem';
 import { helpers } from '../helpers';
+import AddAlumno from "./AddAlumno";
 // import helpers from '../helpers';
 // import { helpers } from '../helpers';
 
@@ -35,7 +36,8 @@ export default class TodoList extends React.Component
     render()
     {
         return ( 
-        
+            <> 
+            <AddAlumno />
             <ul>
                 {
                     // datos[alumnos].maps(e=>{
@@ -56,6 +58,7 @@ export default class TodoList extends React.Component
                     //       <Item data={item} key={index} onRemove={ () => this._remove(index)}
                 }
             </ul>
+            </>
         ); 
           
     }

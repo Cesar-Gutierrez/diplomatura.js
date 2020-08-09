@@ -7,20 +7,26 @@ export default class TodoItem extends React.Component
     _remove=()=>{
 		if(this.props.onRemove)
 			this.props.onRemove();
+
 	}
 	render(){
 
 		console.log("props todo item", this.props);
 		return (
 			<li>
-				{/* <div className="icon">
-					<img src={require(`../images/${this.props.data.image}`)}  alt="estudiante" />
-				</div> */}
+				<div className="icon" >
+					<img src={require(`../images/estudiante.png`)} style={{width:"5rem" }} alt="estudiante" />
+				</div>
 				<div className="itemDescription">
+					<span className="item-nameLabel">Nombre: </span>
 					<span className="item-name">{this.props.value.nombre}</span>
+					<span className="item-edadLabel">Edad: </span>
 					<span className="item-edad">{this.props.value.edad}</span>
 				</div>
-			
+
+				<button className="remove" >
+					<i className="material-icons">Eliminar</i>
+				</button> 
 				{/* <button className="remove" onClick={this._remove(this)}>
 					<i className="material-icons">close</i>
 				</button> */}
