@@ -13,6 +13,10 @@ import {
 } from "react-router-dom";
 import DetalleAlumno from "./components/DetalleAlumno";
 import { helpers } from "./helpers";
+// import 'react-bulma-components/dist/react-bulma-components.min.css';
+// // import { Form } from  'react-bulma-components/dist';;
+// import { Button } from 'react-bulma-components/dist';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -45,11 +49,11 @@ class App extends React.Component {
     console.log("estado vista actual ", this.state);
   }
 
-  mostrarVista = () => {
-    return <div>TODO</div>;
-  };
+  // mostrarVista = () => {
+  //   return <div>TODO</div>;
+  // };
 
-  setLista = () => {};
+  // setLista = () => {};
 
   cargarVista = () => {
     const { vistaActual, idDetalleSeleccionado, alumnos } = this.state;
@@ -126,29 +130,39 @@ class App extends React.Component {
     }
 
     this.setState({ alumnos: newAlumnos });
-    this.setVistaActual("alumnos", -1);
-  };
+    // this.setVistaActual("alumnos", -1);
+    this.cargarListadoAlumno();
+  }
 
   handlerVolverListadoAlumno = () => {
-    this.setVistaActual("alumnos", -1);
-  };
-
+    // this.setVistaActual("alumnos", -1);
+    this.cargarListadoAlumno();
+   };
   handlerAddAlumno = (newAlumno) => {
-    const {alumnos}= datos.alumnos;
-    const newAlumnos= {...alumnos,newAlumno};
+
+    console.log("llego al handler addalumno app",newAlumno);
+
+    // const {alumnos}= this.state.alumnos;
+    const {id,nombre,edad} = newAlumno
+    // const ${id} = 
+    const newAlumnos= [...this.state.alumnos,newAlumno];
+    
+    this.setState({ alumnos: newAlumnos });
     datos.alumnos=newAlumnos;
+    this.cargarListadoAlumno();
+    // console.log('alumnos se ve asi',alumnos)
+    
+    console.log('neWalumnos se ve asi',newAlumnos)
+    
+    console.log('datos.alumnos se ve asi',datos.alumnos)
 
-
-
+    // this.cargarListadoAlumno();
+    
 
   };
 
   render() {
-    // const vistaActual = <div>setVistaActual('alumnos',1)</div>;
-    //hacer switch
-    // if(alumnos)
-    // if(profesores)
-    // if(materias)
+  
     const { vistaActual } = this.state;
 
     // const vistaActual = mostrarVista;
@@ -173,7 +187,7 @@ class App extends React.Component {
             <button className="btn btn-outline-info">Materias</button>
             <button className="btn btn-outline-info">Calificaciones</button>
           </div>
-          <h2>{vistaActual}</h2>
+          <h2>{vistaActual.toUpperCase()}</h2>
           <div>
             {/* <div className="mainView">vistaActual</div> */}
             {/* <div className="mainView">{this.setLista()}}</div> */}
@@ -185,19 +199,7 @@ class App extends React.Component {
           </div>
         </div>
 
-        {/* //      <Switch>
-    //       <Route path="/alumnos">
-    //         <></>
-    //       </Route>
-    //       <Route path="/profesores">
-    //         <></>
-    //       </Route> 
-    //        <Route path="/dynamic/:id" component={DynamicParams} />
-    //       <Route path="/">
-    //         <Home />
-    //       </Route>
-    // <Redirect path="/" />
-    //   </Switch>  */}
+
       </Router>
     );
   }

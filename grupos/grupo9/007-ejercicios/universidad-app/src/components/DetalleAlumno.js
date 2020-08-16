@@ -1,4 +1,8 @@
 import React from "react";
+// import 'react-bulma-components/dist/react-bulma-components.min.css';
+// import { Form } from  'react-bulma-components/dist';;
+// import { Button } from 'react-bulma-components/dist';
+
 
 export default class DetalleAlumno extends React.Component {
   //   constructor(props) {
@@ -24,7 +28,7 @@ export default class DetalleAlumno extends React.Component {
           <div className="icon">
             <img
               src={require(`../images/estudiante.png`)}
-              style={{ width: "5rem" }}
+              style={{ width: "20rem" }}
               alt="estudiante"
             />
           </div>
@@ -43,8 +47,8 @@ export default class DetalleAlumno extends React.Component {
             <span className="alumno-edad">{edad}</span>
           </div>
 
-          <button className="alumno-volver"
-          //  onClick={() => this.handlerVolverListadoAlumno()}
+          <button className="alumno-volver" color="primary"
+           onClick={() => this.handlerVolverListadoAlumno()}
            >
             <i className="alumnoVolver">volver</i>
           </button>

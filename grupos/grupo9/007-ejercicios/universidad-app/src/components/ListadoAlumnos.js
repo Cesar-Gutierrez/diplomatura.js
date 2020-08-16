@@ -19,27 +19,32 @@ export default class ListadoAlumnos extends React.Component {
     };
   }
 
-  _remove(position) {
-    //   debo implementar el remove de colleccion
-    let { data } = this.state.todos;
+  // _remove(position) {
+  //   //   debo implementar el remove de colleccion
+  //   let { data } = this.state.todos;
 
-    let newData = [...data.slice(0, position), ...data.slice(position + 1)];
+  //   let newData = [...data.slice(0, position), ...data.slice(position + 1)];
 
-    this.setState({ todos: newData });
-  }
+  //   this.setState({ todos: newData });
+  // }
 
   borrarAlumno = (idAlumno) => {
     console.log("borre el alumno");
   };
+  handlerAddAlumno=(newAlumno)=>{
+    console.log("llegue al handler addalumno de listadoalumno",newAlumno);
+    this.props.onAddAlumno(newAlumno)
+  }
 
   render() {
-    console.log("estas son las props pasadas a listadoalumnos", this.props);
-    
+    // console.log("estas son las props pasadas a listadoalumnos", this.props);
+    console.log('voy a mapeaar ',this.props.data);
     return (
       <>
-        <FormAddAlumno onAddAlumno={this.props.onAddAlumno}/>
+        <FormAddAlumno onAddAlumno={this.handlerAddAlumno}/>
         <ul>
           {
+           
             // datos[alumnos].maps(e=>{
             // return <li>{e}</li>
             // helpers.getColeccion('alumnos').maps(e=>{
